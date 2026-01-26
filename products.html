@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="production.css">
+</head>
+<body>
+
+<!-- ===== HEADER (SAME AS HOME) ===== -->
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">ShopHub</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Reels</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="actions">
+      <button class="btn">Login</button>
+      <button class="btn primary">Sign Up</button>
+
+      <button class="theme-toggle" id="themeToggle">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+      </button>
+    </div>
+
+    <button class="hamburger" id="hamburger">☰</button>
+  </nav>
+
+   <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="products.html">Products</a>
+    <a href="#">About</a>
+    <a href="#">Reels</a>
+    <a href="#">Contact</a>
+
+    <button class="btn">Login</button>
+    <button class="btn primary">Sign Up</button>
+    <button class="btn secondary" id="themeToggleMobile">
+      Toggle Dark Mode
+    </button>
+  </div>
+</header>
+</header>
+
+<!-- ===== MAIN PRODUCT PAGE ===== -->
+<main class="products-page">
+  <h1>Our Products</h1>
+
+  <!-- FILTERS -->
+  <div class="product-filters">
+    <button class="filter active" data-category="all">All Products</button>
+    <button class="filter" data-category="clothing">Clothing</button>
+    <button class="filter" data-category="shoes">Shoes</button>
+    <button class="filter" data-category="jewelry">Jewelry</button>
+    <button class="filter" data-category="accessories">Accessories</button>
+  </div>
+
+  <!-- PRODUCTS GRID -->
+  <div class="products-grid" id="productsGrid"></div>
+</main>
+
+
+<script src="script.js" defer></script>
+<script src="scriptproduction.js" defer></script>
+</body>
+</html>
