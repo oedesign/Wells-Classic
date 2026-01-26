@@ -53,6 +53,8 @@ body.dark .product-filters {
 
   .product-filters {
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     border-radius: 16px;
   }
 }
