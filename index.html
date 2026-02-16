@@ -1,197 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wells Classic</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wells Classic | Luxury Fashion</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home" data-auth-required="true">
+    <header class="header">
+      <nav class="navbar container">
+        <a class="brand" href="index.html">Wells Classic</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+        <div class="menu" id="menu">
+          <a href="shop.html">Shop</a>
+          <a href="reels.html">Reels</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="cart.html">Cart <span id="cartCount" class="pill">0</span></a>
+          <a href="dashboard.html">Dashboard</a>
+          <button class="theme-switch" id="themeToggle" aria-label="Toggle dark mode">
+            <span class="thumb"></span>
+          </button>
+          <button class="btn ghost" id="logoutBtn">Logout</button>
+        </div>
+      </nav>
+    </header>
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">Luxury Redefined</p>
+          <h1>Wear timeless elegance with every step.</h1>
+          <p>
+            Discover premium clothing, shoes, bags, jewelry, and curated accessories crafted for men and women who value style and distinction.
+          </p>
+          <a href="shop.html" class="btn primary">Order Now</a>
+        </div>
 
-<header class="header">
-  <nav class="navbar">
-    <div class="logo">Wells Classic</div>
+        <div class="hero-carousel" aria-label="Product carousel">
+          <button class="carousel-nav prev" id="prevSlide" aria-label="Previous slide">‹</button>
+          <div class="slides" id="slides">
+            <article class="slide active">
+              <img src="images/images.jpg" alt="Luxury clothing collection" />
+              <h3>Clothing</h3>
+            </article>
+            <article class="slide">
+              <img src="images/hero-image-shoe.webp" alt="Premium shoes" />
+              <h3>Shoes</h3>
+            </article>
+            <article class="slide">
+              <img src="images/images.webp" alt="Designer bags" />
+              <h3>Bags</h3>
+            </article>
+            <article class="slide">
+              <img src="images/watch.webp" alt="Luxury jewelry and watches" />
+              <h3>Jewelry</h3>
+            </article>
+            <article class="slide">
+              <img src="images/hero-image-watch.jpg" alt="Premium accessories" />
+              <h3>Other Essentials</h3>
+            </article>
+          </div>
+          <button class="carousel-nav next" id="nextSlide" aria-label="Next slide">›</button>
+        </div>
+      </section>
 
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Reels</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+      <section class="container section">
+        <div class="section-head">
+          <h2>Shop</h2>
+          <a href="shop.html" class="btn">View Full Shop</a>
+        </div>
+        <div class="card-grid">
+          <a class="category-card" href="shop.html?category=clothing"><h3>Clothing</h3><p>Tailored pieces and signature looks.</p></a>
+          <a class="category-card" href="shop.html?category=shoes"><h3>Shoes</h3><p>From statement heels to refined loafers.</p></a>
+          <a class="category-card" href="shop.html?category=bags"><h3>Bags</h3><p>Iconic silhouettes with rich detailing.</p></a>
+          <a class="category-card" href="shop.html?category=jewelry"><h3>Jewelry</h3><p>Classic sparkle with modern confidence.</p></a>
+        </div>
+      </section>
+    </main>
 
-    <div class="actions">
-      <!-- Cart -->
-      <button class="icon-btn" aria-label="Cart">
-        <svg viewBox="0 0 24 24">
-          <path d="M6 6h15l-1.5 9h-12z"></path>
-          <circle cx="9" cy="21" r="1"></circle>
-          <circle cx="18" cy="21" r="1"></circle>
-        </svg>
-      </button>
-
-      <button class="btn">Login</button>
-      <button class="btn primary">Sign Up</button>
-
-      <!-- Animated Dark Mode Toggle -->
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span class="sun">☀️</span>
-        <span class="moon">🌙</span>
-      </button>
-    </div>
-
-    <button class="hamburger" id="hamburger">☰</button>
-  </nav>
-
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#">Home</a>
-    <a href="products.html">Products</a>
-    <a href="#">About</a>
-    <a href="#">Reels</a>
-    <a href="#">Contact</a>
-
-    <button class="btn">Login</button>
-    <button class="btn primary">Sign Up</button>
-    <button class="btn secondary" id="themeToggleMobile">
-      Toggle Dark Mode
-    </button>
-  </div>
-</header>
-
-<main class="carousel-container">
-  <div class="carousel">
-
-    <!-- Slide 1 -->
-    <div class="slide active">
-      <div class="slide-text">
-        <h1>Premium Sneakers</h1>
-        <p>Step into comfort and style with our latest sneaker collection.
-        </p>
-        <button class="shop-btn">Shop Now</button>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Wells Classic</h3>
+          <p>Luxury fashion for modern icons.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Email: hello@wellsclassic.com</p>
+          <p>Phone: +1 (555) 010-4488</p>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">Pinterest</a>
+        </div>
       </div>
-      <img src="images/hero-image-shoe.webp" alt="Shoes">
-    </div>
+      <p class="copyright">© <span id="year"></span> Wells Classic. All rights reserved.</p>
+    </footer>
 
-    <!-- Slide 2 -->
-    <div class="slide">
-      <div class="slide-text">
-        <h1>Luxury Watches</h1>
-        <p>Timeless designs crafted for elegance and precision.</p>
-        <button class="shop-btn">Shop Now</button>
-      </div>
-      <img src="images/hero-image-watch.jpg" alt="Watches">
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="slide">
-      <div class="slide-text">
-        <h1>Designer Bags</h1>
-        <p>Carry confidence with premium quality bags.</p>
-        <button class="shop-btn">Shop Now</button>
-      </div>
-      <img src="images/images.webp" alt="Bags">
-    </div>
-
-    <!-- Slide 4 -->
-    <!-- <div class="slide">
-      <div class="slide-text">
-        <h1>Smart Headphones</h1>
-        <p>Experience immersive sound like never before.</p>
-        <button class="shop-btn">Shop Now</button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1518441902117-f2bcd6b8a44b" alt="Headphones">
-    </div> -->
-
-    <!-- Slide 5 -->
-    <!-- <div class="slide">
-      <div class="slide-text">
-        <h1>Trendy Apparel</h1>
-        <p>Modern fashion that fits every lifestyle.</p>
-        <button class="shop-btn">Shop Now</button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322" alt="Clothing">
-    </div> -->
-
-    <!-- Slide 6 -->
-    <!-- <div class="slide">
-      <div class="slide-text">
-        <h1>Sports Gear</h1>
-        <p>Gear up for performance and durability.</p>
-        <button class="shop-btn">Shop Now</button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="Sports">
-    </div> -->
-
-    <!-- Controls -->
-    <button class="nav prev">&#10094;</button>
-    <button class="nav next">&#10095;</button>
-
-  </div>
-
-  <section class="categories">
-  <h2 class="categories-title">Shop by Category</h2>
-
-  <div class="categories-grid">
-    <!-- Clothing -->
-    <a href="products.html?category=clothing" class="category-card">
-      <div class="icon clothing">
-        <svg viewBox="0 0 24 24">
-          <path d="M4 6l4-3 4 3 4-3 4 3v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"
-                fill="none" stroke-width="2"/>
-        </svg>
-      </div>
-      <h3>Clothing</h3>
-      <p>Stylish apparel for every occasion</p>
-    </a>
-
-    <!-- Shoes -->
-    <a href="products.html?category=shoes" class="category-card">
-      <div class="icon shoes">
-        <svg viewBox="0 0 24 24">
-          <path d="M3 14h18v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                fill="none" stroke-width="2"/>
-          <path d="M3 14l5-4 6 2 7-1"
-                fill="none" stroke-width="2"/>
-        </svg>
-      </div>
-      <h3>Shoes</h3>
-      <p>Step out in style</p>
-    </a>
-
-    <!-- Jewelry -->
-    <a href="products.html?category=jewelry" class="category-card">
-      <div class="icon jewelry">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 3l9 7-9 11L3 10z"
-                fill="none" stroke-width="2"/>
-        </svg>
-      </div>
-      <h3>Jewelry</h3>
-      <p>Elegant accessories to shine</p>
-    </a>
-
-    <!-- Accessories -->
-    <a href="products.html?category=accessories" class="category-card">
-      <div class="icon accessories">
-        <svg viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="7"
-                  fill="none" stroke-width="2"/>
-          <circle cx="12" cy="12" r="2"
-                  fill="none" stroke-width="2"/>
-        </svg>
-      </div>
-      <h3>Accessories</h3>
-      <p>Complete your look</p>
-    </a>
-  </div>
-</section>
-
-</main>
-
-
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
