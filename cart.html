@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wells Classic | Products</title>
+  <title>Wells Classic | Cart & Checkout</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="production.css" />
 </head>
 <body>
 <header class="header">
@@ -27,7 +26,6 @@
     </div>
     <button class="hamburger" id="hamburger">☰</button>
   </nav>
-
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
@@ -39,35 +37,33 @@
   </div>
 </header>
 
-<main class="products-page">
-  <h1>Our Products</h1>
+<main class="cart-layout">
+  <section>
+    <h1>Your Cart</h1>
+    <p id="emptyCart">No items in cart yet. Visit products to add items.</p>
+    <div id="cartItems" class="cart-items"></div>
+    <button id="clearCartBtn" class="btn">Clear Cart</button>
+  </section>
 
-  <div class="catalog-toolbar">
-    <input id="productSearch" type="search" placeholder="Search products..." />
-    <select id="sortProducts" aria-label="Sort products">
-      <option value="featured">Featured</option>
-      <option value="price-low">Price: Low to High</option>
-      <option value="price-high">Price: High to Low</option>
-      <option value="name">Name: A-Z</option>
-    </select>
-  </div>
+  <aside class="checkout-card">
+    <h2>Order Summary</h2>
+    <p>Subtotal: <strong id="subtotal">$0.00</strong></p>
+    <p>Shipping: <strong id="shipping">$0.00</strong></p>
+    <p>Total: <strong id="total">$0.00</strong></p>
+    <p class="checkout-note">After you click <strong>Place Order</strong>, a prefilled Gmail draft opens for the admin to receive your order details.</p>
 
-  <div class="product-filters">
-    <button class="filter active" data-category="all">All Products</button>
-    <button class="filter" data-category="clothing">Clothing</button>
-    <button class="filter" data-category="shoes">Shoes</button>
-    <button class="filter" data-category="jewelry">Jewelry</button>
-    <button class="filter" data-category="accessories">Accessories</button>
-  </div>
-
-  <div class="products-grid" id="productsGrid"></div>
+    <form id="checkoutForm" class="checkout-form">
+      <input id="customerName" type="text" placeholder="Full name" required>
+      <input id="customerEmail" type="email" placeholder="Email" required>
+      <input id="customerPhone" type="tel" placeholder="Phone number" required>
+      <textarea id="deliveryAddress" rows="3" placeholder="Delivery address" required></textarea>
+      <button type="submit" class="btn primary">Place Order</button>
+    </form>
+  </aside>
 </main>
 
-<footer class="site-footer">
-  <p>© 2026 Wells Classic. Secure checkout • Fast delivery • 24/7 support.</p>
-</footer>
-
+<footer class="site-footer"><p>© 2026 Wells Classic. Secure checkout • Fast delivery • 24/7 support.</p></footer>
 <script src="script.js" defer></script>
-<script src="scriptproduction.js" defer></script>
+<script src="cart.js" defer></script>
 </body>
 </html>

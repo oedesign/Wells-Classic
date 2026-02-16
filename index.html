@@ -4,194 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wells Classic</title>
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
 <header class="header">
   <nav class="navbar">
     <div class="logo">Wells Classic</div>
-
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="products.html">Products</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Reels</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reels.html">Reels</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
 
     <div class="actions">
-      <!-- Cart -->
-      <button class="icon-btn" aria-label="Cart">
-        <svg viewBox="0 0 24 24">
-          <path d="M6 6h15l-1.5 9h-12z"></path>
-          <circle cx="9" cy="21" r="1"></circle>
-          <circle cx="18" cy="21" r="1"></circle>
-        </svg>
-      </button>
-
+      <a class="icon-btn cart-link" href="cart.html" aria-label="Open cart">
+        <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"></path><circle cx="9" cy="21" r="1"></circle><circle cx="18" cy="21" r="1"></circle></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
       <button class="btn">Login</button>
       <button class="btn primary">Sign Up</button>
-
-      <!-- Animated Dark Mode Toggle -->
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span class="sun">☀️</span>
-        <span class="moon">🌙</span>
-      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="sun">☀️</span><span class="moon">🌙</span></button>
     </div>
-
     <button class="hamburger" id="hamburger">☰</button>
   </nav>
 
-  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#">Home</a>
+    <a href="index.html">Home</a>
     <a href="products.html">Products</a>
-    <a href="#">About</a>
-    <a href="#">Reels</a>
-    <a href="#">Contact</a>
-
-    <button class="btn">Login</button>
-    <button class="btn primary">Sign Up</button>
-    <button class="btn secondary" id="themeToggleMobile">
-      Toggle Dark Mode
-    </button>
+    <a href="about.html">About</a>
+    <a href="reels.html">Reels</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart (<span data-cart-count>0</span>)</a>
+    <button class="btn secondary" id="themeToggleMobile">Toggle Dark Mode</button>
   </div>
 </header>
 
 <main class="carousel-container">
   <div class="carousel">
-
-    <!-- Slide 1 -->
     <div class="slide active">
       <div class="slide-text">
         <h1>Premium Sneakers</h1>
-        <p>Step into comfort and style with our latest sneaker collection.
-        </p>
-        <button class="shop-btn">Shop Now</button>
+        <p>Step into comfort and style with our latest sneaker collection.</p>
+        <a href="products.html?category=shoes" class="shop-btn">Shop Now</a>
       </div>
       <img src="images/hero-image-shoe.webp" alt="Shoes">
     </div>
 
-    <!-- Slide 2 -->
     <div class="slide">
       <div class="slide-text">
         <h1>Luxury Watches</h1>
         <p>Timeless designs crafted for elegance and precision.</p>
-        <button class="shop-btn">Shop Now</button>
+        <a href="products.html?category=accessories" class="shop-btn">Shop Now</a>
       </div>
       <img src="images/hero-image-watch.jpg" alt="Watches">
     </div>
 
-    <!-- Slide 3 -->
     <div class="slide">
       <div class="slide-text">
         <h1>Designer Bags</h1>
         <p>Carry confidence with premium quality bags.</p>
-        <button class="shop-btn">Shop Now</button>
+        <a href="products.html?category=accessories" class="shop-btn">Shop Now</a>
       </div>
       <img src="images/images.webp" alt="Bags">
     </div>
 
-    <!-- Slide 4 -->
-    <!-- <div class="slide">
-      <div class="slide-text">
-        <h1>Smart Headphones</h1>
-        <p>Experience immersive sound like never before.</p>
-        <button class="shop-btn">Shop Now</button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1518441902117-f2bcd6b8a44b" alt="Headphones">
-    </div> -->
-
-    <!-- Slide 5 -->
-    <!-- <div class="slide">
-      <div class="slide-text">
-        <h1>Trendy Apparel</h1>
-        <p>Modern fashion that fits every lifestyle.</p>
-        <button class="shop-btn">Shop Now</button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322" alt="Clothing">
-    </div> -->
-
-    <!-- Slide 6 -->
-    <!-- <div class="slide">
-      <div class="slide-text">
-        <h1>Sports Gear</h1>
-        <p>Gear up for performance and durability.</p>
-        <button class="shop-btn">Shop Now</button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="Sports">
-    </div> -->
-
-    <!-- Controls -->
     <button class="nav prev">&#10094;</button>
     <button class="nav next">&#10095;</button>
-
   </div>
 
   <section class="categories">
-  <h2 class="categories-title">Shop by Category</h2>
-
-  <div class="categories-grid">
-    <!-- Clothing -->
-    <a href="products.html?category=clothing" class="category-card">
-      <div class="icon clothing">
-        <svg viewBox="0 0 24 24">
-          <path d="M4 6l4-3 4 3 4-3 4 3v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"
-                fill="none" stroke-width="2"/>
-        </svg>
-      </div>
-      <h3>Clothing</h3>
-      <p>Stylish apparel for every occasion</p>
-    </a>
-
-    <!-- Shoes -->
-    <a href="products.html?category=shoes" class="category-card">
-      <div class="icon shoes">
-        <svg viewBox="0 0 24 24">
-          <path d="M3 14h18v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                fill="none" stroke-width="2"/>
-          <path d="M3 14l5-4 6 2 7-1"
-                fill="none" stroke-width="2"/>
-        </svg>
-      </div>
-      <h3>Shoes</h3>
-      <p>Step out in style</p>
-    </a>
-
-    <!-- Jewelry -->
-    <a href="products.html?category=jewelry" class="category-card">
-      <div class="icon jewelry">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 3l9 7-9 11L3 10z"
-                fill="none" stroke-width="2"/>
-        </svg>
-      </div>
-      <h3>Jewelry</h3>
-      <p>Elegant accessories to shine</p>
-    </a>
-
-    <!-- Accessories -->
-    <a href="products.html?category=accessories" class="category-card">
-      <div class="icon accessories">
-        <svg viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="7"
-                  fill="none" stroke-width="2"/>
-          <circle cx="12" cy="12" r="2"
-                  fill="none" stroke-width="2"/>
-        </svg>
-      </div>
-      <h3>Accessories</h3>
-      <p>Complete your look</p>
-    </a>
-  </div>
-</section>
-
+    <h2 class="categories-title">Shop by Category</h2>
+    <div class="categories-grid">
+      <a href="products.html?category=clothing" class="category-card"><div class="icon clothing"><svg viewBox="0 0 24 24"><path d="M4 6l4-3 4 3 4-3 4 3v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" fill="none" stroke-width="2"/></svg></div><h3>Clothing</h3><p>Stylish apparel for every occasion</p></a>
+      <a href="products.html?category=shoes" class="category-card"><div class="icon shoes"><svg viewBox="0 0 24 24"><path d="M3 14h18v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="none" stroke-width="2"/><path d="M3 14l5-4 6 2 7-1" fill="none" stroke-width="2"/></svg></div><h3>Shoes</h3><p>Step out in style</p></a>
+      <a href="products.html?category=jewelry" class="category-card"><div class="icon jewelry"><svg viewBox="0 0 24 24"><path d="M12 3l9 7-9 11L3 10z" fill="none" stroke-width="2"/></svg></div><h3>Jewelry</h3><p>Elegant accessories to shine</p></a>
+      <a href="products.html?category=accessories" class="category-card"><div class="icon accessories"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="none" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="none" stroke-width="2"/></svg></div><h3>Accessories</h3><p>Complete your look</p></a>
+    </div>
+  </section>
 </main>
 
+<footer class="site-footer">
+  <p>© 2026 Wells Classic. Secure checkout • Fast delivery • 24/7 support.</p>
+</footer>
 
-<script src="script.js"></script>
-
+<script src="script.js" defer></script>
 </body>
 </html>
