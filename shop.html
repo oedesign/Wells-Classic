@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | Wells Classic</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="shop" data-auth-required="true">
+    <header class="header"><nav class="navbar container"><a class="brand" href="index.html">Wells Classic</a><button class="hamburger" id="hamburger">☰</button><div class="menu" id="menu"><a href="shop.html">Shop</a><a href="reels.html">Reels</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="cart.html">Cart <span id="cartCount" class="pill">0</span></a><a href="dashboard.html">Dashboard</a><button class="theme-switch" id="themeToggle"><span class="thumb"></span></button><button class="btn ghost" id="logoutBtn">Logout</button></div></nav></header>
+    <main class="container section">
+      <h1>The Shop</h1>
+      <p class="lead">Browse by category and collection type: Male, Female, Custom, and New Arrivals.</p>
+      <div class="chips" id="categoryChips">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="clothing">Clothing</button>
+        <button class="chip" data-filter="shoes">Shoes</button>
+        <button class="chip" data-filter="bags">Bags</button>
+        <button class="chip" data-filter="jewelry">Jewelry</button>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </main>
+    <footer class="footer"><p class="copyright">© <span id="year"></span> Wells Classic. All rights reserved.</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

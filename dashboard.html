@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Dashboard | Wells Classic</title><link rel="stylesheet" href="styles.css" /></head>
+<body data-page="dashboard" data-auth-required="true">
+<header class="header"><nav class="navbar container"><a class="brand" href="index.html">Wells Classic</a><button class="hamburger" id="hamburger">☰</button><div class="menu" id="menu"><a href="shop.html">Shop</a><a href="reels.html">Reels</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="cart.html">Cart <span id="cartCount" class="pill">0</span></a><a href="dashboard.html">Dashboard</a><button class="theme-switch" id="themeToggle"><span class="thumb"></span></button><button class="btn ghost" id="logoutBtn">Logout</button></div></nav></header>
+<main class="container section"><h1>Mini Dashboard</h1><p class="lead">Track purchases, payment history, and manage your profile.</p><div class="card-grid"><section class="info-card"><h3>Purchased Products</h3><ul id="purchaseList"></ul></section><section class="info-card"><h3>Payment History</h3><ul id="paymentList"></ul></section><section class="info-card"><h3>Manage Account</h3><form id="accountForm"><input id="accountName" placeholder="Name" required /><input id="accountPhone" placeholder="Phone" /><button class="btn" type="submit">Save Details</button><p id="accountMessage"></p></form></section></div></main>
+<footer class="footer"><p class="copyright">© <span id="year"></span> Wells Classic. All rights reserved.</p></footer>
+<script src="script.js"></script>
+</body></html>
